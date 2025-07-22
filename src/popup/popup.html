@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="error-message" id="error-message">
+            Unable to fetch exchange rates
+        </div>
+
+        <div class="main-converter">
+            <div class="currency-row-group">
+                <div class="currency-row-menu">
+                    <input type="number" class="amount-input" id="amount-from" value="1" step="0.01" min="0" placeholder="Amount">
+                    <select class="currency-select" id="currency-from">
+                        <option value="USD">USD</option>
+                        <option value="EUR" selected>EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="JPY">JPY</option>
+                        <option value="CAD">CAD</option>
+                        <option value="AUD">AUD</option>
+                        <option value="CHF">CHF</option>
+                        <option value="CNY">CNY</option>
+                        <option value="INR">INR</option>
+                        <option value="KRW">KRW</option>
+                    </select>
+                </div>
+                <div class="currency-row-menu">
+                    <input type="number" class="amount-input" id="amount-to" value="0" step="0.01" min="0" placeholder="Amount">
+                    <select class="currency-select" id="currency-to">
+                        <option value="USD" selected>USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="JPY">JPY</option>
+                        <option value="CAD">CAD</option>
+                        <option value="AUD">AUD</option>
+                        <option value="CHF">CHF</option>
+                        <option value="CNY">CNY</option>
+                        <option value="INR">INR</option>
+                        <option value="KRW">KRW</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="divider">
+                <div class="swap-button" id="swap-btn">⇅</div>
+            </div>
+
+            <div class="rate-display" id="rate-display">
+                1 EUR = 1.0850 USD
+            </div>
+        </div>
+
+        <div class="preview-section">
+            <div class="preview-header">
+                <span class="preview-title">Quick Preview</span>
+                <button class="add-currency-btn" id="add-currency-btn">+</button>
+            </div>
+
+            <div id="preview-list">
+                <div class="preview-item" data-currency="GBP">
+                    <span class="preview-code">GBP</span>
+                    <span class="preview-name">Pound</span>
+                    <span class="preview-amount">86.84</span>
+                    <button class="delete-btn">×</button>
+                </div>
+                <div class="preview-item" data-currency="JPY">
+                    <span class="preview-code">JPY</span>
+                    <span class="preview-name">Yen</span>
+                    <span class="preview-amount">16,215</span>
+                    <button class="delete-btn">×</button>
+                </div>
+                <div class="preview-item" data-currency="CAD">
+                    <span class="preview-code">CAD</span>
+                    <span class="preview-name">Dollar</span>
+                    <span class="preview-amount">148.75</span>
+                    <button class="delete-btn">×</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>Data from Frankfurter API</div>
+            <div id="last-updated">Last updated: Just now</div>
+        </div>
+    </div>
+
+<script src="popup.js"></script>
+</body>
+</html>
