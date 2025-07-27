@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Current: Currency Converter",
-  "version": "0.1.0",
-  "description": "Convert currencies.",
-  
+  "name": "Okane",
+  "version": "0.1.1",
+  "description": "Currency converter using daily ECB reference rates",
+
   "permissions": [
     "activeTab",
     "storage",
@@ -11,12 +11,12 @@
   ],
   
   "host_permissions": [
-    "https://api.frankfurter.dev/*"
+    "https://api.frankfurter.dev/v1/latest/*"
   ],
   
   "action": {
     "default_popup": "popup/popup.html",
-    "default_title": "Current: Currency Converter",
+    "default_title": "Okane: Currency Converter",
     "default_icon": {
       "16": "icons/icon-16.png",
       "32": "icons/icon-32.png",

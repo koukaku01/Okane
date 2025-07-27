@@ -6,7 +6,7 @@
  */
 
 // Frankfurter API config
-const API_BASE = 'https://api.frankfurter.dev';
+const API_BASE = 'https://api.frankfurter.dev/v1/latest';
 const UPDATE_ALARM_NAME = 'updateExchangeRates';
 const CACHE_DURATION_HOURS = 24;
 

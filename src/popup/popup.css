@@ -11,6 +11,9 @@ body {
     width: 320px;
     min-height: 400px;
     overflow-x: hidden;
+
+    /* Center the dialogue in the popup */
+    margin: 0 20px;
 }
 
 .container {
